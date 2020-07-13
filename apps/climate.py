@@ -8,7 +8,8 @@ class Climate(mqtt.Mqtt):
 
     _debug = True
 
-    _remote_address = '192.168.0.10'
+    _remote_address = '192.168.10.10'
+    _local_address = '192.168.10.8'
     _remote_port = 10002
     _udp_discovery_port = 10001
 
@@ -16,7 +17,7 @@ class Climate(mqtt.Mqtt):
     _server_socket_conn = None
     _client_socket = None
 
-    _discovery = '<myclimate><get>discovery</get><ip>192.168.10.205</ip><platform>android</platform><version>1.0.0</version></myclimate>'
+    _discovery = '<myclimate><get>discovery</get><ip>{}</ip><platform>android</platform><version>1.0.0</version></myclimate>'.format(_local_address)
     _delete = '<myclimate><delete>connection</delete></myclimate>'
     _getzoneinfo = '<myclimate><get>getzoneinfo</get><zoneList>1,2</zoneList></myclimate>'
 
