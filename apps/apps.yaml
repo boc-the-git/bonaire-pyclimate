@@ -1,7 +1,3 @@
 climate:
   module: climate
   class: Climate
-
-ptv:
-  module: ptv
-  class: PTV
